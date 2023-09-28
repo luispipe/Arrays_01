@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,11 +23,12 @@ public class MainActivity extends AppCompatActivity {
         //Arreglo de números
         //Los arreglos inician en la posición 0
         //p0->2 p1=20 p2=70 p3=60 p4=15 p5=6 p6=47
-        int [] numeros= {2,20,70,60,15,6,47};
+        int [] numeros= {2,20,70,60,15,6,47,1,99,88};
         numeros[2]=33;
         numeros[5]=numeros[0]*numeros[4];
         // {2,20,33,60,15,30,47}
-
+        // Orden
+        Arrays.sort(numeros);
         //Arreglo de nombres
         // "Luis;30;1.70;87456963;M;Colombia;Caldas;Manizales"
         String [] nombres= new String[7];
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println(numeros.length+"-"+nombres.length);
         System.out.println(numeros[5]+2+"-"+nombres[7]);
+        System.out.println(Arrays.toString(numeros));
 
 
     }
